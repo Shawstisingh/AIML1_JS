@@ -84,3 +84,11 @@ for(let x in person){
         // result = a/b/c;
         // document.write(result);
         // document.write(linebreak); //TO BREAK LINE
+        //const element = document.getElementById("myH1")
+       // let text = element.getAttribute("class")
+       //console.log(text) 
+        const heading =document.createElement("h2");
+        const bodytag=document.getElementsByTagName("body")
+        heading.innerText="hello";
+        heading.style.backgroundColor="pink";
+        bodytag.appendChild(heading);
