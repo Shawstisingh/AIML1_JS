@@ -1,94 +1,37 @@
-//console.log("Hello World");
-//document.write("Hello World");
-//var num=10;
-//console.log(typeof(num));
-
-//num = false;
-//console.log(num);
-//console.log(typeof(num));
-//num="Sanjeev Soni";
-//console.log(num);
-//console.log(typeof(num));
-//num=null;
-//console.log(num);
-//console.log(typeof(num));
-//num=undefined;
-//console.log(num);
-//console.log(typeof(num));
-
-//function 
-//var sayHello=function();{
-//alert("Hello");
-//}
-//array
-//var numberArray={1,2,3};
-//var animals= new Array("Dog","Cat","Horse");
-//object 
-
-
-
-
-
-
-//const sym1=Symbol(4);
-//console.log(sym1);
-//const sym2=Symbol(4);
-//console.log(sym2);
-//if(sym1==sym2){
-  //  console.log("True");
-//}
-//else{
-  //  console.log("False"); //because each symbol is unique even if they have the same description
-//}
-
-
-
-//var a =10;
-  //      var b=20;
-   //     var linebreak ="<br/>";
-     //   document.write("(a==b)=>");
-     //   result =(a==b);
-       // document.write(result);
-        //document.write(linebreak);
-        //document.write("(a<b)=>");
-        //result =(a<b);
-        //document.write((result);
-        //document.write(linebreak);
-//var count;
-//document.write("Starting loop"+"<br/>"");
-//for(count=0;count<10;count++) {
-  //  document.write(Current Count:"+count);
-    //    document.write("br/>");
-//}
-//document.write(("loop stopped");
-
-
-const person ={
-    fname="ajay";
-    Iname:"singh";
-    age:25;
-};
-for(let x in person){
-    console.log("person details:"+x+":"+person[x]);
+let employees=[];
+function addEmployee(){
+    let name =
+    document.getElementById("name").value;
+    let empId =
+    document.getElementById("empId").value;
+    let salary =
+    parseFloat(document.getElementById("salary").value);
+    let dept =
+    document.getElementById("dept").value;
+    if (name === "" || empId === "" || isNaN(salary) || dept === "") {
+        alert("Please fill in all fields correctly.");
+        return;
 }
- // var a=100;var b=13; var c=10; var linebreak="<br>";
-        // document.write("a+b+c=");
-        // result = a+b+c;
-        // document.write(result);
-        // document.write(linebreak);
-        // document.write("a*b*c=");
-        // result = a*b*c;
-        // document.write(result);
-        // document.write(linebreak);
-        //  document.write("a/b/c=");
-        // result = a/b/c;
-        // document.write(result);
-        // document.write(linebreak); //TO BREAK LINE
-        //const element = document.getElementById("myH1")
-       // let text = element.getAttribute("class")
-       //console.log(text) 
-        const heading =document.createElement("h2");
-        const bodytag=document.getElementsByTagName("body")
-        heading.innerText="hello";
-        heading.style.backgroundColor="pink";
-        bodytag.appendChild(heading);
+let employee = {
+    name: name,
+    empId: empId,
+    salary: salary,
+    department: dept ,
+};
+employees.push(employee);
+alert("Employee added successfully!");
+document.getElementById("name").value = "";
+document.getElementById("empId").value = "";
+document.getElementById("salary").value = "";
+document.getElementById("dept").value = "";
+}
+function filtersalary(){
+    let filtered = employees.filter((emp)=> emp.salary > 50000);
+    let output = "<h3>Employees with salary greater than 50,000:</h3>";
+    filtered.forEach((emp)=>{
+        output += `<p>Name: ${emp.name}, Emp ID: ${emp.empId}, Salary: ${emp.salary}, Department: ${emp.department}</p>`;
+    });
+    document.getElementById("output").innerHTML = output;    
+
+    
+}
