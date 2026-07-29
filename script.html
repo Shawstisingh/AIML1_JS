@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type ="text/javascript"src="./script.js"> </script>
+</head>
+<body>
+    <h1>Employee Salary Management</h1>
+    <form id="salaryform">
+        <label for="empId">Employee ID:</label>
+        <input type="text" id="empId" required>
+        <br><br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <br><br>
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" step="0.01" required>
+        <br><br>
+        <label for="dept">Department:</label>
+        <select id="dept" required>
+            <option value="">Select Department</option>
+            <option value="IT">IT</option>
+            <option value="HR">HR</option>
+            <option value="Finance">Finance</option>
+        </select>
+        <br><br>
+        <button type="button" onclick="addEmployee()">Add Employee</button>
+    </form>
+</body>
+</html>
