@@ -17,9 +17,12 @@
 // }
 
 
-function abes(){
-    console.log("Welcome Students");
-    console.log("Welcome to Node.js");``
+// 
+
+
+function greet (fname, lname)
+{
+    console.log("Hello " , fname , lname);
 }
-    abes();
-    
+greet ("Shawsti", "Singh");
+greet("Rimjhim", "Keshri");
