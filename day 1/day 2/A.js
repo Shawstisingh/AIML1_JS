@@ -3,13 +3,23 @@
 // console.log(firstName);
 // console.log(lastName);
 
-var a=40;
-var b=30;
-if(a>b)
-{
-    console.log("A is greater, value of A is: ", a);
+
+
+// var a=40;
+// var b=30;
+// if(a>b)
+// {
+//     console.log("A is greater, value of A is: ", a);
+// }
+// else
+// {
+//     console.log("B is greater, value of B is: ", b);
+// }
+
+
+function abes(){
+    console.log("Welcome Students");
+    console.log("Welcome to Node.js");``
 }
-else
-{
-    console.log("B is greater, value of B is: ", b);
-}
+    abes();
+    
