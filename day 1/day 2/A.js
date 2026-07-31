@@ -29,9 +29,23 @@
 
 
 
-function add (a, b)
+// function add (a, b)
+// {
+//     return a+b;
+// }
+// var result=add(20, 30);
+// console.log("Sum of 20 and 30 is: ", result);
+
+
+// function fullName (fname = "ABES ", lname= "Engineering College")
+//   {
+//     return fname + " " + lname;
+//   }
+//   console.log(fullName());
+// //   console.log(fullName("Shawsti", "Singh"));
+
+
+function totalmarks(maths, science, english)
 {
-    return a+b;
+        return maths + science + english;
 }
-var result=add(20, 30);
-console.log("Sum of 20 and 30 is: ", result);
