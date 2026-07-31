@@ -1,4 +1,4 @@
-console.log("==== Variables ====");
-
-var text = "Somethig";
-console.log(text);
+var firstName = "Shawsti";
+var lastName = "Singh";
+console.log(firstName);
+console.log(lastName);
