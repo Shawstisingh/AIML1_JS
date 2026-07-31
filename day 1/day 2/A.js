@@ -20,9 +20,18 @@
 // 
 
 
-function greet (fname, lname)
+// function greet (fname, lname)
+// {
+//     console.log("Hello " , fname , lname);
+// }
+// greet ("Shawsti", "Singh");
+// greet("Rimjhim", "Keshri");
+
+
+
+function add (a, b)
 {
-    console.log("Hello " , fname , lname);
+    return a+b;
 }
-greet ("Shawsti", "Singh");
-greet("Rimjhim", "Keshri");
+var result=add(20, 30);
+console.log("Sum of 20 and 30 is: ", result);
