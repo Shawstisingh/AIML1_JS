@@ -7,3 +7,4 @@ const student = {
     department: "AIML",
 };
 console.log(student);
+console.log("Student Name: " + student.name);
