@@ -50,13 +50,23 @@
 //         return maths + science + english;
 // }
 
-console.log("=====array methods=====");
-        let arr=[10,20,30,40,50];
-        let sum=0;
-        for(let i=0; i<arr.length; i++)
-        {
-            console.log(arr[i]);
-            sum+=arr[i];
-        }
-        console.log("Sum of array elements is: ", sum);
-        
+// console.log("=====array methods=====");
+//         let arr=[10,20,30,40,50];
+//         let sum=0;
+//         for(let i=0; i<arr.length; i++)
+//         {
+//             console.log(arr[i]);
+//             sum+=arr[i];
+//         }
+//         console.log("Sum of array elements is: ", sum);
+
+
+console.log("=====array 2d methods=====");
+let students=[
+    [ 1, "Shawsti","Singh", "21", 90, 80, 70],
+    [ 2, "Rimjhim", "Keshari", "20", 80, 70, 60],
+    [ 3, "Sakshi", "Pandey", "19", 70, 60, 50],
+];
+console.log("Student Name: ", students[0][1], students[0][2]);
+console.log("Student Age: ", students[0][3]);
+console.log("Student Marks: ", students[0][4], students[0][5], students[0][6]);
