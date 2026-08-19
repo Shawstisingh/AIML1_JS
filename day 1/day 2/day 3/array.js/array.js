@@ -39,12 +39,17 @@
   
 
 
-console.log("=====array of objects=====");  
-let student=[
-    {
-        id:1,
-        name:"Shawsti Singh",
-        age:20
-    }
-];
-console.log(student);
+console.log("=====array=====");
+//push() method
+let fruits = ["apple", "banana", "orange"];
+fruits.push("grape");
+console.log(fruits);
+//pop() method
+fruits.pop();
+console.log(fruits);
+//shift() method
+fruits.shift();
+console.log(fruits);   //first remove
+//unshift() method
+fruits.unshift("kiwi"); //first me add
+console.log(fruits);
