@@ -39,17 +39,22 @@
   
 
 
-console.log("=====array=====");
-//push() method
-let fruits = ["apple", "banana", "orange"];
-fruits.push("grape");
-console.log(fruits);
-//pop() method
-fruits.pop();
-console.log(fruits);
-//shift() method
-fruits.shift();
-console.log(fruits);   //first remove
-//unshift() method
-fruits.unshift("kiwi"); //first me add
-console.log(fruits);
+// console.log("=====array=====");
+// //push() method
+// let fruits = ["apple", "banana", "orange"];
+// fruits.push("grape");
+// console.log(fruits);
+// //pop() method
+// fruits.pop();
+// console.log(fruits);
+// //shift() method
+// fruits.shift();
+// console.log(fruits);   //first remove
+// //unshift() method
+// fruits.unshift("kiwi"); //first me add
+// console.log(fruits);
+
+
+ console.log("=====date objects=====");
+ let date=new Date();    
+ console.log(date);
