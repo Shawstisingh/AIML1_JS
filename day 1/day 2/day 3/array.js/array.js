@@ -27,3 +27,12 @@ console.log("split=" ,result);
 let text="I love JavaScript";
 let newText=text.replace("love","like");
 console.log("replace=" ,newText);
+
+//9.concat()
+let first="shawsti";
+let last="singh";
+let fullName=first.concat(" ",last);
+console.log("concat=" ,fullName);
+//10.includes()
+let includesText=message.includes("JavaScript");
+console.log("includes=" ,includesText);
