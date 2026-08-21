@@ -4,111 +4,187 @@
     <title>Registration Form</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
+            background: linear-gradient(135deg, #ffd6e7, #f8a8c8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
 
         .form-box {
-            width: 350px;
-            margin: 50px auto;
-            padding: 25px;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px gray;
+            width: 400px;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
-        h2 {
+        h1 {
             text-align: center;
+            color: #d63384;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: gray;
+            margin-bottom: 25px;
         }
 
         label {
+            font-weight: bold;
+            color: #444;
             display: block;
-            margin-top: 12px;
+            margin-top: 15px;
         }
 
-        input {
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="password"] {
             width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            box-sizing: border-box;
+            padding: 12px;
+            margin-top: 7px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #d63384;
+            box-shadow: 0 0 5px #f3a6c8;
+        }
+
+        .gender {
+            margin-top: 10px;
+        }
+
+        .gender label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+
+        .gender input {
+            accent-color: #d63384;
         }
 
         button {
             width: 100%;
-            padding: 10px;
-            margin-top: 20px;
-            background-color: blue;
+            padding: 13px;
+            margin-top: 25px;
+            background: #d63384;
             color: white;
             border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
         }
 
         button:hover {
-            background-color: darkblue;
+            background: #b82b70;
+        }
+
+        .required {
+            color: red;
         }
     </style>
 </head>
 
 <body>
 
-<div class="form-box">
+    <div class="form-box">
 
-    <h2>Registration Form</h2>
+        <h1>Create Account</h1>
+        <p class="subtitle">Register to get started</p>
 
-    <form onsubmit="return registerUser()">
+        <form>
 
-        <label>Name:</label>
-        <input type="text" id="name" required>
+            <label>
+                Full Name <span class="required">*</span>
+            </label>
 
-        <label>Email:</label>
-        <input type="email" id="email" required>
+            <input type="text"
+                   placeholder="Enter your full name"
+                   pattern="[A-Za-z ]+"
+                   title="Name should contain letters only"
+                   required>
 
-        <label>Phone Number:</label>
-        <input type="text"
-               id="phone"
-               maxlength="10"
-               required
-               oninput="this.value = this.value.replace(/[^0-9]/g, '')">
 
-        <label>Password:</label>
-        <input type="password" id="password" required>
+            <label>
+                Phone Number <span class="required">*</span>
+            </label>
 
-        <label>Confirm Password:</label>
-        <input type="password" id="confirmPassword" required>
+            <input type="tel"
+                   placeholder="Enter 10 digit number"
+                   pattern="[0-9]{10}"
+                   maxlength="10"
+                   title="Enter exactly 10 digits"
+                   required>
 
-        <button type="submit">Register</button>
 
-    </form>
+            <label>
+                Email <span class="required">*</span>
+            </label>
 
-</div>
+            <input type="email"
+                   placeholder="example@gmail.com"
+                   required>
 
-<script>
-function registerUser() {
 
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
-    let password = document.getElementById("password").value;
-    let confirmPassword = document.getElementById("confirmPassword").value;
+            <label>
+                Gender <span class="required">*</span>
+            </label>
 
-    // Check phone number
-    if (phone.length != 10) {
-        alert("Phone number must contain exactly 10 digits.");
-        return false;
-    }
+            <div class="gender">
 
-    // Check password
-    if (password != confirmPassword) {
-        alert("Passwords do not match.");
-        return false;
-    }
+                <label>
+                    <input type="radio"
+                           name="gender"
+                           required>
+                    Male
+                </label>
 
-    alert("Registration Successful!");
+                <label>
+                    <input type="radio"
+                           name="gender">
+                    Female
+                </label>
 
-    return true;
-}
-</script>
+                <label>
+                    <input type="radio"
+                           name="gender">
+                    Other
+                </label>
+
+            </div>
+
+
+            <label>
+                Password <span class="required">*</span>
+            </label>
+
+            <input type="password"
+                   placeholder="Minimum 6 characters"
+                   minlength="6"
+                   required>
+
+
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+    </div>
 
 </body>
-</html> 
+</html>
