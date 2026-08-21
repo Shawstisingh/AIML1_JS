@@ -85,3 +85,5 @@
  console.log("abs=" + Math.abs(-5));
  console.log("pow=" + Math.pow(2, 3));
  
+
+ 
