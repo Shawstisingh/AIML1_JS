@@ -52,7 +52,7 @@ const department = {
 };
 
 const courseClass = {
-    name: "Data Structures",
+    name: "aiml",
     collegeName: "Abes college",
     collegeLocation: "ghaziabad",
     collegeEstablishedYear: 2000,
