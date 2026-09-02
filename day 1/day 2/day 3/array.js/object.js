@@ -36,3 +36,28 @@ const f = {
 
 e.show();
 f.show();
+
+function college() {
+    console.log("My college name is: " + this.collegeName);
+    console.log("My college location is: " + this.collegeLocation);
+    console.log("My college established year is: " + this.collegeEstablishedYear);
+}
+
+const department = {
+    name: "Computer Science",
+    collegeName: "Abes college",
+    collegeLocation: "ghaziabad",
+    collegeEstablishedYear: 2000,
+    show: college
+};
+
+const courseClass = {
+    name: "Data Structures",
+    collegeName: "Abes college",
+    collegeLocation: "ghaziabad",
+    collegeEstablishedYear: 2000,
+    show: college
+};
+
+department.show();
+courseClass.show();
