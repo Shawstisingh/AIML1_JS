@@ -1,10 +1,21 @@
 <html>
     <body>
         <script>
-            function addnumber(...numbers) {
-                console.log(numbers);
+            // function addnumber(...numbers) {
+            //     console.log(numbers);
+            // }
+            // addnumber(10, 20, 30, 40, 50);
+
+            function sum(...nums)
+            {
+                let total = 0;
+                for (let num of nums) {
+                    total += num;
+                }
+                return total;
             }
-            addnumber(10, 20, 30, 40, 50);
+            console.log(sum(10, 20, 30, 40, 50));
+            
             </script>
             </body>
             </html>
