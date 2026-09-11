@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
     <body>
         <script>
             // function addnumber(...numbers) {
@@ -6,17 +6,51 @@
             // }
             // addnumber(10, 20, 30, 40, 50);
 
-            function sum(...nums)
-            {
-                let total = 0;
-                for (let num of nums) {
-                    total += num;
-                }
-                return total;
-            }
-            console.log(sum(10, 20, 30, 40, 50));
+            // function sum(...nums)
+            // {
+            //     let total = 0;
+            //     for (let num of nums) {
+            //         total += num;
+            //     }
+            //     return total;
+            // }
+            // console.log(sum(10, 20, 30, 40, 50));
+
+
+            function printDetails(name, ...numbers) {
+    let total = 0;
+
+    for (let num of numbers) {
+        total += num;
+    }
+
+    console.log("Name:", name);
+    console.log("Total:", total);
+}
+
+printDetails("Shawsti", 20, 30, 50);
             
             </script>
             </body>
             </html>
-            
+             -->
+
+
+             <html>
+  <body>
+    <script>
+      function printDetails(name, ...numbers) {
+        let total = 0;
+
+        for (let num of numbers) {
+          total += num;
+        }
+
+        console.log("Name:", name);
+        console.log("Total:", total);
+      }
+
+      printDetails("Utkarsh", 20, 30, 50);
+    </script>
+  </body>
+</html>
