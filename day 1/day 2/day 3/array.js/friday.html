@@ -35,7 +35,7 @@ printDetails("Shawsti", 20, 30, 50);
             </html>
              -->
 
-
+<!-- 
              <html>
   <body>
     <script>
@@ -51,6 +51,32 @@ printDetails("Shawsti", 20, 30, 50);
       }
 
       printDetails("Utkarsh", 20, 30, 50);
+    </script>
+  </body>
+</html> -->
+
+
+<html>
+  <body>
+    <script>
+      function sumNumbers(...numbers) {
+        let total = 0;
+
+        for (let num of numbers) {
+          total += num;
+        }
+
+        return total;
+      }
+
+      let n1 = Number(prompt("Enter first number:"));
+      let n2 = Number(prompt("Enter second number:"));
+      let n3 = Number(prompt("Enter third number:"));
+      let n4 = Number(prompt("Enter fourth number:"));
+
+      let result = sumNumbers(n1, n2, n3, n4);
+
+      console.log("Total:", result);
     </script>
   </body>
 </html>
