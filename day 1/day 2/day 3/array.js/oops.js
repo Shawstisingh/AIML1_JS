@@ -37,13 +37,27 @@
 
 
 
-class hello()
-{
-    static name="expample of static variable";
-    static show()
-    {
-        console.log("name",this.name);
+// class hello()
+// {
+//     static name="expample of static variable";
+//     static show()
+//     {
+//         console.log("name",this.name);
 
-    }
+//     }
+// }
+// hello.show();
+
+
+class hello5{
+    static name="example of static variable";
+    constructor(){
+    this.instancevariable="example of instance variable";
 }
-hello.show();
+show(){
+    console.log("instance variable",this.instancevariable);
+    console.log("static variable",hello5.name);
+}
+}
+let h5=new hello5();
+h5.show();
