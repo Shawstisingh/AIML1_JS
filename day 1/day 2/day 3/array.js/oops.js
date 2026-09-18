@@ -20,17 +20,30 @@
 // }
 
 
-class student()
+// class student()
+// {
+//     constructor(rollno,name,age)
+//     {
+//         this.rollno=rollno;
+//         this.name=name;
+//         this.age=age;
+//         console.log"Student details are",this.rollno,this.name,this.age);
+
+//     }
+// }
+// let s=new student();
+// let s1=new student(182,"shawsti",19);
+// console.log(s1);
+
+
+
+class hello()
 {
-    constructor(rollno,name,age)
+    static name="expample of static variable";
+    static show()
     {
-        this.rollno=rollno;
-        this.name=name;
-        this.age=age;
-        console.log"Student details are",this.rollno,this.name,this.age);
+        console.log("name",this.name);
 
     }
 }
-let s=new student();
-let s1=new student(182,"shawsti",19);
-console.log(s1);
+hello.show();
