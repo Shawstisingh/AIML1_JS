@@ -49,15 +49,69 @@
 // hello.show();
 
 
-class hello5{
-    static name="example of static variable";
-    constructor(){
-    this.instancevariable="example of instance variable";
-}
-show(){
-    console.log("instance variable",this.instancevariable);
-    console.log("static variable",hello5.name);
-}
-}
-let h5=new hello5();
-h5.show();
+// class hello5{
+//     static name="example of static variable";
+//     constructor(){
+//     this.instancevariable="example of instance variable";
+// }
+// show(){
+//     console.log("instance variable",this.instancevariable);
+//     console.log("static variable",hello5.name);
+// }
+// }
+// let h5=new hello5();
+// h5.show();
+
+// //without constructor
+// class hello6{
+//     faculty="shawsti";
+// }
+// let h6=new hello6();
+// console.log(h6.faculty);
+
+
+
+
+class student{
+    static count =0;
+    constructor(rollno,name,marks){
+        this.rollno=rollno;
+        this.name=name;
+        this.marks=marks;
+        student.count++;
+    }
+    displayresult(){
+        console.log("Roll No:",this.rollno);
+        console.log("Name:",this.name);
+        console.log("Marks:",this.marks);
+        if (this.marks>=40){
+            console.log("Result: Pass");
+        }
+        else{
+            console.log("Result: Fail");
+        }
+        static displaycount(){
+            console.log("Total Students:",student.count);
+        }
+    }
+    let s1=new student(101,"Rimjhim",45);
+    let s2=new student(102,"Shawsti",35);
+    let s3=new student(103,"Sakshi",55);
+    s1.displayresult();
+    s2.displayresult();
+    s3.displayresult();
+    student.displaycount();
+ 
+
+    class bankaccount{
+        bankaccountholder;
+        accountno;
+        balance;
+        constructor(bankaccountholder,accountno,balance)
+        {
+            this.bankaccountholder=bankaccountholder;
+            this.accountno=accountno;
+            this.balance=balance;
+        }
+        
+    }
