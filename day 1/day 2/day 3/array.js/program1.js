@@ -8,3 +8,15 @@ ud.on('exit', (num) => {
 });
 ud.emit('greet', 'Shawsti');
 ud.emit('exit', 182 );
+
+
+ class Button extends EventEmitter{
+    click(){
+        console.log("button clicked");
+        this.emit('click' , { timestamp: Date.now() });
+    }
+};
+const button = new Button();
+button.on('click', (event) => {
+    console.log(`button clicked at ${event.timestamp}`);
+})
