@@ -73,7 +73,7 @@
 
 
 class student{
-    static count =0;
+    static count = 0;
     constructor(rollno,name,marks){
         this.rollno=rollno;
         this.name=name;
@@ -90,28 +90,27 @@ class student{
         else{
             console.log("Result: Fail");
         }
-        static displaycount(){
-            console.log("Total Students:",student.count);
-        }
     }
-    let s1=new student(101,"Rimjhim",45);
-    let s2=new student(102,"Shawsti",35);
-    let s3=new student(103,"Sakshi",55);
-    s1.displayresult();
-    s2.displayresult();
-    s3.displayresult();
-    student.displaycount();
- 
+    static displaycount(){
+        console.log("Total Students:", student.count);
+    }
+}
 
-    class bankaccount{
-        bankaccountholder;
-        accountno;
-        balance;
-        constructor(bankaccountholder,accountno,balance)
-        {
-            this.bankaccountholder=bankaccountholder;
-            this.accountno=accountno;
-            this.balance=balance;
-        }
-        
+let s1=new student(101,"Rimjhim",45);
+let s2=new student(102,"Shawsti",35);
+let s3=new student(103,"Sakshi",55);
+s1.displayresult();
+s2.displayresult();
+s3.displayresult();
+student.displaycount();
+
+class bankaccount{
+    bankaccountholder;
+    accountno;
+    balance;
+    constructor(bankaccountholder,accountno,balance)
+    {
+        this.bankaccountholder=bankaccountholder;
+        this.accountno=accountno;
     }
+}
